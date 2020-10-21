@@ -2,7 +2,7 @@
 
 1.) Under "Prerequisites" we have to _add_:
 
-* With Docker: you have to provide a docker file derived from the "node" docker image containing these global dependencies: "@ui5/cli @sap/ux-ui5-tooling @ui5/logger @ui5/fs"
+* With Docker: you have to provide a docker file derived from the "node" docker image containing these global dependencies: "@ui5/cli @sap/ux-ui5-tooling @ui5/logger @ui5/fs". All these dependencies are available in the default npm registry.
 
 The corresponding docker file (which we do not publish) would look like
 
@@ -14,6 +14,8 @@ RUN npm install -g @ui5/cli @sap/ux-ui5-tooling @ui5/logger @ui5/fs
 USER node
 ```
 
+In case the communication to the ABAP backend is performed via https it might be required to add custom certificates.
+
 Later in this document we assume that docker image is available with tag "fiorideploy"
 
 * Without Docker: you have installed the node based fiori toolset for uploading content to the abap frontend server. These dependencies can be installed via
@@ -22,6 +24,7 @@ Later in this document we assume that docker image is available with tag "fiorid
 npm install -g @ui5/cli @sap/ux-ui5-tooling @ui5/logger @ui5/fs
 ```
 
+All these dependencies are available in the default npm registry.
 This installs the dependencies under "/usr/local/lib". Hence you need to use a user with write permissions to that folder.
 
 2.) Under "The ABAP Life-Cycle Management" we have to _replace_ at "To upload a file to your transport" ...
@@ -54,3 +57,4 @@ The parameters are
 ### Additional Remarks:
 
 * Under "Prerequisites": link for cm_client docker file does not work
+* Under "Release and Export your transport request": In our test system A5D I'm not able to launch the Transport Organizer WebUI. I click on Environment >> Transport Organizer Web UI, "HE" asks me to choose a System and nothing happens. I can't see any transport requests. But I can see the transport requests via the transport organizer contained in SE80.
