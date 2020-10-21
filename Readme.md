@@ -58,3 +58,4 @@ The parameters are
 
 * Under "Prerequisites": link for cm_client docker file does not work
 * Under "Release and Export your transport request": In our test system A5D I'm not able to launch the Transport Organizer WebUI. I click on Environment >> Transport Organizer Web UI, "HE" asks me to choose a System and nothing happens. I can't see any transport requests. But I can see the transport requests via the transport organizer contained in SE80.
+* It is extremly odd to have two different tools at the same time in the context of uploading stuff to ABAP. We have the cm_client for creating a transport request and we have the fiori toolset for performing the upload. In the long run it might happen that the fiori toolset also supports creating transport requests and releasing transport requests. But so far that is not supported by the fiori toolset.
