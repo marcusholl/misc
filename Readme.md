@@ -1,6 +1,6 @@
 ### Updates
 
-Under "Prerequisites" we have to add:
+1.) Under "Prerequisites" we have to _add_:
 
 * With Docker: you have to provide a docker file derived from the "node" docker image containing these global dependencies: "@ui5/cli @sap/ux-ui5-tooling @ui5/logger @ui5/fs"
 
