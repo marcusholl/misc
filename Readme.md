@@ -33,17 +33,24 @@ docker run --env ABAP_USER=<YOUR_USER> --env ABAP_PASSWORD=<YOUR_PASSWORD> -v `p
 
 * Without Docker
 ```
-export ABAP_USER=<YOUR_USER> ABAP_PASSWORD=<YOUR_PASSWORD>
-fiori deploy --noConfig -t <TRANSPORT_REQUEST_ID> -u <URL> -p <PACKAGE> -n <APP_NAME> -l <CLIENT> -e "<DESCRIPTION>" -f -y --username ABAP_USER --password ABAP_PASSWORD
+export ABAP_USER=<USER> ABAP_PASSWORD=<PASSWORD>
+fiori deploy --noConfig -t <TRANSPORT_ID> -u <URL> -p <PACKAGE> -n <APP_NAME> -l <CLIENT> -e "<DESCRIPTION>" -f -y --username ABAP_USER --password ABAP_PASSWORD
 unset ABAP_USER ABAP_PASSWORD
 ```
 
-* <URL> is something like https://example.org:8000
+* &lt;URL&gt; is something like https://example.org:8000
 * In both cases we need to be in the project root directory.
 * We expect the application has been built prior to the deployment.
 * The application needs to be contained in a folder named `dist`.
 * The part about creating a transport request remains unchanged.
 
+The parameters are
+* URL / Endpoint is something like https://example.org:8000 "The endpoint of your service" is not 100% accurate since the "endpoint" would be something like: "https://example.org/sap/opu/odata/ui5/abap_repository_srv". The later part is added by the toolset internally.
+* CLIENT The abap client
+* DESCRIPTION An arbitrary description for the app. Only taken into account for initial deployments, not for re-deployments.
+* PACKAGE The package to that the application belongs to
+* APP_NAME: The name of the application
+* The other parameters not explicitly mentioned here remains unchanged.
 
 ### Additional Remarks:
 
