@@ -47,7 +47,7 @@ unset ABAP_USER ABAP_PASSWORD
 * The part about creating a transport request remains unchanged.
 
 The parameters are
-* URL / Endpoint is something like https://example.org:8000 "The endpoint of your service" is not 100% accurate since the "endpoint" would be something like: "https://example.org/sap/opu/odata/ui5/abap_repository_srv". The later part is added by the toolset internally.
+* URL / Endpoint is something like https://example.org:8000 "The endpoint of your service" is not 100% accurate since the "endpoint" would be something like: "https://example.org:8000/sap/opu/odata/ui5/abap_repository_srv". The later part is added by the toolset internally.
 * CLIENT The abap client
 * DESCRIPTION An arbitrary description for the app. Only taken into account for initial deployments, not for re-deployments.
 * PACKAGE The package to that the application belongs to
