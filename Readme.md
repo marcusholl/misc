@@ -31,7 +31,7 @@ This installs the dependencies under "/usr/local/lib". Hence you need to use a u
 
 * With Docker
 ```
-docker run --env ABAP_USER=<YOUR_USER> --env ABAP_PASSWORD=<YOUR_PASSWORD> -v `pwd`:/project -w /project --rm -it fiorideploy fiori deploy --noConfig -t <TRANSPORT_REQUEST_ID> -u <URL> -p <PACKAGE> -n <APP_NAME> -l <CLIENT> -e "<DESCRIPTION>" -f -y --username ABAP_USER --password ABAP_PASSWORD
+docker run --env ABAP_USER=<USER> --env ABAP_PASSWORD=<PASSWORD> -v `pwd`:/project -w /project --rm -it fiorideploy fiori deploy --noConfig -t <TRANSPORT_ID> -u <URL> -p <PACKAGE> -n <APP_NAME> -l <CLIENT> -e "<DESCRIPTION>" -f -y --username ABAP_USER --password ABAP_PASSWORD
 ```
 
 * Without Docker
