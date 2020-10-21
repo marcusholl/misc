@@ -24,7 +24,7 @@ npm install -g @ui5/cli @sap/ux-ui5-tooling @ui5/logger @ui5/fs
 
 This installs the dependencies under "/usr/local/lib". Hence you need to use a user with write permissions to that folder.
 
-2.) Under "The ABAP Life-Cycle Management" we have to replace at "To upload a file to your transport" ...
+2.) Under "The ABAP Life-Cycle Management" we have to _replace_ at "To upload a file to your transport" ...
 
 * With Docker
 ```
