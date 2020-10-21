@@ -1,6 +1,8 @@
 ### Updates
 
-1.) Under "Prerequisites" we have to _add_:
+#### Prerequisites
+
+Under "Prerequisites" we have to _add_:
 
 * With Docker: you have to provide a docker file derived from the "node" docker image containing these global dependencies: "@ui5/cli @sap/ux-ui5-tooling @ui5/logger @ui5/fs". All these dependencies are available in the default npm registry.
 
@@ -27,7 +29,8 @@ npm install -g @ui5/cli @sap/ux-ui5-tooling @ui5/logger @ui5/fs
 All these dependencies are available in the default npm registry.
 This installs the dependencies under "/usr/local/lib". Hence you need to use a user with write permissions to that folder.
 
-2.) Under "The ABAP Life-Cycle Management" we have to _replace_ at "To upload a file to your transport" ...
+#### Lifecycle management
+Under "The ABAP Life-Cycle Management" we have to _replace_ at "To upload a file to your transport" ...
 
 * With Docker
 ```
