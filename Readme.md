@@ -38,7 +38,6 @@ fiori deploy --noConfig -t <TRANSPORT_ID> -u <URL> -p <PACKAGE> -n <APP_NAME> -l
 unset ABAP_USER ABAP_PASSWORD
 ```
 
-* &lt;URL&gt; is something like https://example.org:8000
 * In both cases we need to be in the project root directory.
 * We expect the application has been built prior to the deployment.
 * The application needs to be contained in a folder named `dist`.
